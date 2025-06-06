@@ -8,9 +8,42 @@ import {
   HStack,
   Text,
   SimpleGrid,
-  VStack
+  VStack,
+  Container
 } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route, Link as RouterLink } from "react-router-dom";
+import styled from "@emotion/styled";
+import { motion } from "framer-motion";
+
+const AnimatedNavLink = styled(Link)`
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: -18px;
+    left: 0;
+    background-color: #0b5de0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  &:not(:hover)::after {
+    width: 0;
+    left: auto;
+    right: 0;
+    transition: width 0.3s ease-in-out;
+  }
+`;
+
+const MotionBox = motion(Box);
+const MotionSimpleGrid = motion(SimpleGrid);
 
 const Navbar = () => {
   return (
@@ -23,6 +56,7 @@ const Navbar = () => {
       zIndex="1000"
       bg="brand.black"
       boxShadow="0 2px 4px rgba(0,0,0,0.2)"
+      borderBottom="1px solid white"
       p={4}
       align="center"
     >
@@ -30,67 +64,95 @@ const Navbar = () => {
         <RouterLink to="/">
           <Image src="/logo.png" alt="Logo" boxSize="30px" />
         </RouterLink>
-        <Heading size="md">Cheese Chase</Heading>
+        <RouterLink to="/" style={{ textDecoration: 'none' }}>
+          <Heading size="md">Cheese Chase</Heading>
+        </RouterLink>
       </HStack>
       <Spacer />
       <HStack spacing={6}>
-        <Link as={RouterLink} to="/project">Project (Webots game)</Link>
-        <Link as={RouterLink} to="/journey">Our Journey</Link>
-        <Link as={RouterLink} to="/gallery">Gallery</Link>
-        <Link as={RouterLink} to="/about">About us</Link>
+        <AnimatedNavLink as={RouterLink} to="/project" fontSize="lg">Project (Webots game)</AnimatedNavLink>
+        <AnimatedNavLink as={RouterLink} to="/journey" fontSize="lg">Our Journey</AnimatedNavLink>
+        <AnimatedNavLink as={RouterLink} to="/gallery" fontSize="lg">Gallery</AnimatedNavLink>
+        <AnimatedNavLink as={RouterLink} to="/about" fontSize="lg">About us</AnimatedNavLink>
       </HStack>
     </Flex>
   );
 };
 
 const HomePage = () => (
-  <Box pt="80px" px={6}>
-    <Flex direction="column" alignItems="center" textAlign="center">
-      <Heading mb={4}>Our project with MoOngy</Heading>
-      <Text fontSize="lg" mb={8}>
-        Welcome to our journey! We're 8 students from Slovenia doing an Erasmus+ internship at MoOngy in Portugal.
-      </Text>
-      <Image 
-        src="/team-photo.jpg" 
-        alt="Our team at MoOngy" 
-        maxWidth="800px"
-        borderRadius="lg"
-        shadow="lg"
-        mb={16}
-      />
-      
-      <Heading size="xl" mb={12}>Explore our page</Heading>
-      
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} maxW="1200px" width="100%">
-        <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
-          <Heading size="lg" mb={4}>Project (Webots game)</Heading>
-          <Text fontSize="lg">
-            See what we've been working on at MoOngy! Our main task is creating a cat-and-mouse style game using Webots, a robotics simulator. We'll show you how we planned it, developed it, overcame technical challenges, and brought the game to life.
+  <Box pt="80px">
+    <Container maxW="container.xl">
+      <Flex direction="column" alignItems="center" textAlign="center">
+        <MotionBox
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          mb={8}
+        >
+          <Heading mb={4}>Our project with MoOngy</Heading>
+          <Text fontSize="lg" mb={8}>
+            Welcome to our journey! We're 8 students from Slovenia doing an Erasmus+ internship at MoOngy in Portugal.
           </Text>
-        </VStack>
+          <Image 
+            src="/team-photo.jpg" 
+            alt="Our team at MoOngy" 
+            maxWidth="800px"
+            borderRadius="lg"
+            shadow="lg"
+            mb={16}
+          />
+        </MotionBox>
+        
+        <MotionBox
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          mb={12}
+        >
+          <Heading size="xl">Explore our page</Heading>
+        </MotionBox>
+        
+        <MotionSimpleGrid
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          columns={{ base: 1, md: 2 }}
+          spacing={10}
+          maxW="1200px"
+          width="100%"
+        >
+          <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
+            <Heading size="lg" mb={4}>Project (Webots game)</Heading>
+            <Text fontSize="lg">
+              See what we've been working on at MoOngy! Our main task is creating a cat-and-mouse style game using Webots, a robotics simulator. We'll show you how we planned it, developed it, overcame technical challenges, and brought the game to life.
+            </Text>
+          </VStack>
 
-        <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
-          <Heading size="lg" mb={4}>About Us</Heading>
-          <Text fontSize="lg">
-            See what we've been working on at MoOngy! Our main task is creating a cat-and-mouse style game using Webots, a robotics simulator. We'll show you how we planned it, developed it, overcame technical challenges, and brought the game to life.
-          </Text>
-        </VStack>
+          <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
+            <Heading size="lg" mb={4}>About Us</Heading>
+            <Text fontSize="lg">
+              See what we've been working on at MoOngy! Our main task is creating a cat-and-mouse style game using Webots, a robotics simulator. We'll show you how we planned it, developed it, overcame technical challenges, and brought the game to life.
+            </Text>
+          </VStack>
 
-        <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
-          <Heading size="lg" mb={4}>Our Journey</Heading>
-          <Text fontSize="lg">
-            Follow our adventures in Portugal! From our arrival in Lisbon to sightseeing, cultural experiences, and weekend trips, this section shows the human side of our Erasmus+ experience.
-          </Text>
-        </VStack>
+          <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
+            <Heading size="lg" mb={4}>Our Journey</Heading>
+            <Text fontSize="lg">
+              Follow our adventures in Portugal! From our arrival in Lisbon to sightseeing, cultural experiences, and weekend trips, this section shows the human side of our Erasmus+ experience.
+            </Text>
+          </VStack>
 
-        <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
-          <Heading size="lg" mb={4}>Gallery</Heading>
-          <Text fontSize="lg">
-            A picture is worth a thousand words. Check out our favorite snapshots from Lisbon, our work at MoOngy, team activities, and the beautiful places we've visited.
-          </Text>
-        </VStack>
-      </SimpleGrid>
-    </Flex>
+          <VStack align="stretch" p={6} borderWidth="1px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
+            <Heading size="lg" mb={4}>Gallery</Heading>
+            <Text fontSize="lg">
+              A picture is worth a thousand words. Check out our favorite snapshots from Lisbon, our work at MoOngy, team activities, and the beautiful places we've visited.
+            </Text>
+          </VStack>
+        </MotionSimpleGrid>
+      </Flex>
+    </Container>
   </Box>
 );
 
