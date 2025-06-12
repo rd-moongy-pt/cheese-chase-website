@@ -24,7 +24,7 @@ const AnimatedNavLink = styled(RouterLink)`
     content: '';
     position: absolute;
     width: ${props => props.$isActive ? '100%' : '0'};
-    height: 3px;
+    height: 4px;
     bottom: -21px;
     left: 0;
     background-color: #0b5de0;
@@ -55,9 +55,8 @@ const Navbar = () => {
       left="0"
       right="0"
       zIndex="1000"
-      bg="brand.black"
+      bg="brand.navbar"
       boxShadow="0 2px 4px rgba(0,0,0,0.2)"
-      borderBottom="1px solid white"
       p={4}
       align="center"
     >

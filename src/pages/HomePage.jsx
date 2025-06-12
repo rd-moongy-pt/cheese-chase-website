@@ -48,7 +48,7 @@ const GlowingBox = styled(VStack)`
 `;
 
 const HomePage = () => (
-  <Box pt="100px" overflowY="auto" h="100vh">
+  <Box pt="115px" overflowY="auto" h="100vh">
     <Container maxW="container.xl">
       <Flex direction="column" alignItems="center" textAlign="center">
         <MotionBox
@@ -65,9 +65,11 @@ const HomePage = () => (
             src="/team-photo.jpg" 
             alt="Our team at MoOngy" 
             maxWidth="100%"
+            maxHeight="20%"
+            objectFit="cover"
             borderRadius="lg"
             shadow="lg"
-            mb={16}
+            mb={12}
           />
         </MotionBox>
         

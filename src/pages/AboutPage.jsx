@@ -50,40 +50,40 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Žan Debenjak",
-      image: "/team/member1.jpg"
+      image: "/pictures/aboutus/zan.jpg"
     },
     {
       name: "Luka Česnik",
-      image: "/team/member2.jpg"
+      image: "/pictures/aboutus/cesnik.jpg"
     },
     {
       name: "Matevž Bremec",
-      image: "/team/member3.jpg"
+      image: "/pictures/aboutus/bremc.jpg"
     },
     {
       name: "Tai Krmpondi",
-      image: "/pictures/team/krmp.jpg"
+      image: "/pictures/aboutus/krmp.jpg"
     },
     {
       name: "Nejc Slavec",
-      image: "/pictures/team/Slve.jpg"
+      image: "/pictures/aboutus/Slve.jpg"
     },
     {
       name: "Maj Poženel",
-      image: "/team/member6.jpg"
+      image: "/pictures/aboutus/maj.jpg"
     },
     {
       name: "Luka Groznik",
-      image: "/team/member7.jpg"
+      image: "/pictures/aboutus/groznik.jpg"
     },
     {
       name: "Nik Premru",
-      image: "/team/member8.jpg"
+      image: "/pictures/aboutus/nik.png"
     }
   ];
 
   return (
-    <Box pt="80px">
+    <Box pt="115px">
       <Container maxW="container.xl">
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ const AboutPage = () => {
           </Text>
           <AspectRatio ratio={21/9} mb={12}>
             <Image
-              src="/gallery/team-working.jpg"
+              src="/pictures/aboutus/team2.png"
               alt="Our Team at Work"
               objectFit="cover"
               borderRadius="lg"
@@ -112,6 +112,7 @@ const AboutPage = () => {
           ))}
         </SimpleGrid>
 
+        {/* Our Mission section - preserved for reference
         <MotionBox
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -143,6 +144,7 @@ const AboutPage = () => {
             </Box>
           </Flex>
         </MotionBox>
+        */}
       </Container>
     </Box>
   );

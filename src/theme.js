@@ -10,6 +10,7 @@ const theme = extendTheme({
       blue: '#0b5de0',
       black: '#2b2929',
       white: '#f5f5f5',
+      navbar: '#4a4848',
     },
   },
   styles: {

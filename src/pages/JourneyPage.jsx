@@ -67,7 +67,7 @@ const TimelineItem = ({ date, title, description, isLeft, image }) => (
 );
 
 const JourneyPage = () => (
-  <Box pt="80px">
+  <Box pt="115px">
     <Container maxW="container.xl">
       <MotionBox
         initial={{ opacity: 0, y: 20 }}
