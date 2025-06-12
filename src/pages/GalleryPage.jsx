@@ -214,7 +214,7 @@ const GalleryPage = () => {
     {
       title: "Beach",
       description: "Paradise",
-      images: Array.from({ length: 3 }, (_, i) => `/pictures/gallery/beach/${i + 1}.jpg`)
+      images: Array.from({ length: 8 }, (_, i) => `/pictures/gallery/beach/${i + 1}.jpg`)
     }
   ];
 

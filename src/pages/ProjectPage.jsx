@@ -10,10 +10,13 @@ import {
   ListItem,
   ListIcon,
   AspectRatio,
-  Flex
+  Flex,
+  useDisclosure
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MdCheckCircle } from "react-icons/md";
+import ImageModal from "../components/ImageModal";
+import { useState } from "react";
 
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
@@ -21,6 +24,14 @@ const MotionVStack = motion(VStack);
 const MotionListItem = motion(ListItem);
 
 const ProjectPage = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    onOpen();
+  };
+
   const listVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -105,7 +116,7 @@ const ProjectPage = () => {
             >
               <AspectRatio ratio={16/9}>
                 <MotionImage
-                  src="/pictures/project/image.png"
+                  src="/pictures/project/123.png"
                   alt="Webots Development"
                   objectFit="cover"
                   borderRadius="lg"
@@ -129,17 +140,17 @@ const ProjectPage = () => {
                 {
                   title: "Planning",
                   description: "Initial concept development and game design planning",
-                  image: "/gallery/team-working.jpg"
+                  image: "/pictures/project/sir.png"
                 },
                 {
                   title: "Development",
                   description: "Implementing game mechanics and robot behaviors",
-                  image: "/gallery/presentation.jpg"
+                  image: "/pictures/project/image.png"
                 },
                 {
                   title: "Testing",
                   description: "Rigorous testing and gameplay refinement",
-                  image: "/gallery/team-dinner.jpg"
+                  image: "/pictures/project/123.png"
                 }
               ].map((phase, index) => (
                 <MotionVStack
@@ -165,6 +176,8 @@ const ProjectPage = () => {
                       borderRadius="md"
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
+                      cursor="pointer"
+                      onClick={() => handleImageClick(phase.image)}
                     />
                   </AspectRatio>
                   <Heading size="md">{phase.title}</Heading>
@@ -180,13 +193,14 @@ const ProjectPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             mt={8}
+            mb={8}
           >
             <Heading size="lg" mb={6}>Project Highlights</Heading>
             <Flex direction={{ base: "column", md: "row" }} gap={6}>
-              <Box flex="1">
+              <Box flex="1" mb={4}>
                 <AspectRatio ratio={16/9}>
                   <MotionImage
-                    src="/gallery/weekend-trip.jpg"
+                    src="/pictures/project/1234.png"
                     alt="Project Achievement"
                     objectFit="cover"
                     borderRadius="lg"
@@ -240,6 +254,12 @@ const ProjectPage = () => {
           </MotionBox>
         </VStack>
       </Container>
+
+      <ImageModal
+        isOpen={isOpen}
+        onClose={onClose}
+        imageSrc={selectedImage}
+      />
     </Box>
   );
 };

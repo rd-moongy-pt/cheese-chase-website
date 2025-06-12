@@ -54,19 +54,19 @@ const AboutPage = () => {
     },
     {
       name: "Luka Česnik",
-      image: "/pictures/aboutus/cesnik.jpg"
+      image: "/pictures/aboutus/cesnik2.png"
     },
     {
       name: "Matevž Bremec",
       image: "/pictures/aboutus/bremc.jpg"
     },
     {
-      name: "Tai Krmpondi",
+      name: "Tai Raimondi",
       image: "/pictures/aboutus/krmp.jpg"
     },
     {
       name: "Nejc Slavec",
-      image: "/pictures/aboutus/Slve.jpg"
+      image: "/pictures/aboutus/Slve.png"
     },
     {
       name: "Maj Poženel",
@@ -74,7 +74,7 @@ const AboutPage = () => {
     },
     {
       name: "Luka Groznik",
-      image: "/pictures/aboutus/groznik.jpg"
+      image: "/pictures/aboutus/groznik.png"
     },
     {
       name: "Nik Premru",

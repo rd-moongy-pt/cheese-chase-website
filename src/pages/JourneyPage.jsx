@@ -30,14 +30,16 @@ const TimelineItem = ({ date, title, description, isLeft, image }) => (
           <Heading size="md" textAlign="right" mb={2}>{title}</Heading>
           <Text textAlign="right" mb={4}>{description}</Text>
           {image && (
-            <AspectRatio ratio={16/9} mb={4}>
-              <Image
-                src={image}
-                alt={title}
-                objectFit="cover"
-                borderRadius="lg"
-              />
-            </AspectRatio>
+            <Box maxW="400px" ml="auto">
+              <AspectRatio ratio={16/9} mb={4}>
+                <Image
+                  src={image}
+                  alt={title}
+                  objectFit="cover"
+                  borderRadius="lg"
+                />
+              </AspectRatio>
+            </Box>
           )}
         </Box>
       )}
@@ -51,14 +53,16 @@ const TimelineItem = ({ date, title, description, isLeft, image }) => (
           <Heading size="md" mb={2}>{title}</Heading>
           <Text mb={4}>{description}</Text>
           {image && (
-            <AspectRatio ratio={16/9} mb={4}>
-              <Image
-                src={image}
-                alt={title}
-                objectFit="cover"
-                borderRadius="lg"
-              />
-            </AspectRatio>
+            <Box maxW="400px">
+              <AspectRatio ratio={16/9} mb={4}>
+                <Image
+                  src={image}
+                  alt={title}
+                  objectFit="cover"
+                  borderRadius="lg"
+                />
+              </AspectRatio>
+            </Box>
           )}
         </Box>
       )}
@@ -81,7 +85,7 @@ const JourneyPage = () => (
         </Text>
         <AspectRatio ratio={21/9} mb={12}>
           <Image
-            src="/gallery/lisbon-streets.jpg"
+            src="/pictures/journey/grad.jpg"
             alt="Lisbon Streets"
             objectFit="cover"
             borderRadius="lg"
@@ -91,11 +95,11 @@ const JourneyPage = () => (
 
       <VStack spacing={0} align="stretch">
         <TimelineItem
-          date="February 2024"
+          date="22.05.2025"
           title="Arrival in Lisbon"
           description="Our team arrived in beautiful Lisbon, ready to start our Erasmus+ internship adventure. We were immediately captivated by the city's charm and warmth."
           isLeft={true}
-          image="/gallery/lisbon-streets.jpg"
+          image="/pictures/journey/letalo.jpg"
         />
 
         <TimelineItem
@@ -103,15 +107,15 @@ const JourneyPage = () => (
           title="Getting Started at MoOngy"
           description="We began our internship at MoOngy, meeting our mentors and getting familiar with the Webots platform. The excitement of starting our project was palpable."
           isLeft={false}
-          image="/gallery/team-working.jpg"
+          image="/pictures/journey/team-photo.jpg"
         />
 
         <TimelineItem
           date="Weekend Adventures"
-          title="Exploring Portuguese Culture"
-          description="Between work days, we explored local markets, tried traditional Portuguese cuisine, and visited historic sites. Every weekend brought new discoveries."
+          title="Enjoying weekend nights"
+          description="Between work days, we explored Portugal colture and went sightseeing. But the weekend nights brought unforgettable memories and new friendships."
           isLeft={true}
-          image="/gallery/portuguese-food.jpg"
+          image="/pictures/journey/krmp.jpg"
         />
 
         <TimelineItem
@@ -145,12 +149,13 @@ const JourneyPage = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         mt={16}
+        mb={20}
       >
         <Heading size="lg" mb={8}>Memorable Moments</Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
           <AspectRatio ratio={4/3}>
             <Image
-              src="/gallery/weekend-trip.jpg"
+              src="/pictures/journey/trip.jpg"
               alt="Weekend Trip"
               objectFit="cover"
               borderRadius="lg"
@@ -158,7 +163,7 @@ const JourneyPage = () => (
           </AspectRatio>
           <AspectRatio ratio={4/3}>
             <Image
-              src="/gallery/cultural-visit.jpg"
+              src="/pictures/journey/metro.jpg"
               alt="Cultural Visit"
               objectFit="cover"
               borderRadius="lg"
@@ -166,7 +171,7 @@ const JourneyPage = () => (
           </AspectRatio>
           <AspectRatio ratio={4/3}>
             <Image
-              src="/gallery/team-dinner.jpg"
+              src="/pictures/journey/dinner.jpg"
               alt="Team Dinner"
               objectFit="cover"
               borderRadius="lg"
