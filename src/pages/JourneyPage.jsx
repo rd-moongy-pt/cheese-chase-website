@@ -123,15 +123,15 @@ const JourneyPage = () => (
           title="Making Progress"
           description="As we dove deeper into our project, we celebrated small victories and overcame challenges together. Our team's collaboration grew stronger each day."
           isLeft={false}
-          image="/gallery/coding-session.jpg"
+          image="/pictures/journey/41.jpg"
         />
 
         <TimelineItem
           date="Cultural Exchange"
           title="Building Connections"
-          description="We shared our Slovenian culture with our Portuguese colleagues while embracing local traditions. These exchanges enriched our experience immensely."
+          description="We attended a vibrant local festival where we immersed ourselves in Portuguese traditions and made new friends from different cultures. These cultural exchanges and new friendships made our experience truly special."
           isLeft={true}
-          image="/gallery/team-dinner.jpg"
+          image="/pictures/journey/IMG_3921.jpg"
         />
 
         <TimelineItem
@@ -139,7 +139,7 @@ const JourneyPage = () => (
           title="Growing Together"
           description="As our internship continues, we're excited about the progress we're making and the memories we're creating. This journey is shaping us both personally and professionally."
           isLeft={false}
-          image="/gallery/presentation.jpg"
+          image="/pictures/journey/44.jpg"
         />
       </VStack>
 
@@ -163,7 +163,7 @@ const JourneyPage = () => (
           </AspectRatio>
           <AspectRatio ratio={4/3}>
             <Image
-              src="/pictures/journey/metro.jpg"
+              src="/pictures/journey/66.jpg"
               alt="Cultural Visit"
               objectFit="cover"
               borderRadius="lg"
@@ -171,7 +171,7 @@ const JourneyPage = () => (
           </AspectRatio>
           <AspectRatio ratio={4/3}>
             <Image
-              src="/pictures/journey/dinner.jpg"
+              src="/pictures/journey/52.jpg"
               alt="Team Dinner"
               objectFit="cover"
               borderRadius="lg"
