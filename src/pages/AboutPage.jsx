@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
 
-const TeamMember = ({ name, image }) => (
+const TeamMember = ({ name, image, description }) => (
   <MotionBox
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -41,6 +41,9 @@ const TeamMember = ({ name, image }) => (
       </AspectRatio>
       <VStack spacing={2}>
         <Heading size="md">{name}</Heading>
+        <Text fontSize="sm" textAlign="center" color="gray.400">
+          {description}
+        </Text>
       </VStack>
     </VStack>
   </MotionBox>
@@ -50,35 +53,43 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Žan Debenjak",
-      image: "/pictures/aboutus/zan.jpg"
+      image: "/pictures/aboutus/zan.jpg",
+      description: "Belsko - Slovenija"
     },
     {
       name: "Luka Česnik",
-      image: "/pictures/aboutus/cesnik2.png"
+      image: "/pictures/aboutus/cesnik2.png",
+      description: "Zagorje - Slovenija"
     },
     {
       name: "Matevž Bremec",
-      image: "/pictures/aboutus/bremc.jpg"
+      image: "/pictures/aboutus/bremc.jpg",
+      description: "Ilirska Bistrica - Slovenija"
     },
     {
       name: "Tai Raimondi",
-      image: "/pictures/aboutus/krmp.jpg"
+      image: "/pictures/aboutus/krmp.jpg",
+      description: "Divača - Slovenija"
     },
     {
       name: "Nejc Slavec",
-      image: "/pictures/aboutus/Slve.png"
+      image: "/pictures/aboutus/Slve.png",
+      description: "Koče - Slovenija"
     },
     {
       name: "Maj Poženel",
-      image: "/pictures/aboutus/maj.jpg"
+      image: "/pictures/aboutus/maj.jpg",
+      description: "Rakitnik - Slovenija"
     },
     {
       name: "Luka Groznik",
-      image: "/pictures/aboutus/groznik.png"
+      image: "/pictures/aboutus/groznik.png",
+      description: "Prestranek - Slovenija"
     },
     {
       name: "Nik Premru",
-      image: "/pictures/aboutus/nik.png"
+      image: "/pictures/aboutus/nik.png",
+      description: "Velika Pristava - Slovenija"
     }
   ];
 

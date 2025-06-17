@@ -16,10 +16,12 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link as RouterLink } from "react-router-dom";
 
 const MotionBox = motion(Box);
 
@@ -248,14 +250,29 @@ const GalleryPage = () => {
         {selectedCategory && (
           <CategoryCarousel
             images={selectedCategory.images}
-            title={`${selectedCategory.title} ${selectedCategory.description}`}
+            title={selectedCategory.title}
             isOpen={isOpen}
-            onClose={() => {
-              onClose();
-              setSelectedCategory(null);
-            }}
+            onClose={onClose}
           />
         )}
+
+        <Button
+          as={RouterLink}
+          to="/secret-gallery"
+          position="fixed"
+          bottom="20px"
+          left="20px"
+          bg="brand.black"
+          color="brand.black"
+          size="xs"
+          width="5px"
+          height="5px"
+          p={0}
+          _hover={{ bg: "brand.black" }}
+          zIndex="1000"
+        >
+          Secret
+        </Button>
       </Container>
     </Box>
   );

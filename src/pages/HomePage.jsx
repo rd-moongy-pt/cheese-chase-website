@@ -111,28 +111,12 @@ const HomePage = () => (
             </MotionBox>
           </RouterLink>
 
-          <RouterLink to="/about" style={{ textDecoration: 'none' }}>
-            <MotionBox
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <GlowingBox align="stretch" p={6} borderWidth="3px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
-                <Heading size="lg" mb={4}>About Us</Heading>
-                <Text fontSize="lg">
-                  Meet our diverse team of students from Slovenia! Learn about our backgrounds, roles in the project, and how we're growing together through this amazing experience.
-                </Text>
-              </GlowingBox>
-            </MotionBox>
-          </RouterLink>
-
           <RouterLink to="/journey" style={{ textDecoration: 'none' }}>
             <MotionBox
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
             >
               <GlowingBox align="stretch" p={6} borderWidth="3px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
                 <Heading size="lg" mb={4}>Our Journey</Heading>
@@ -148,12 +132,28 @@ const HomePage = () => (
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
             >
               <GlowingBox align="stretch" p={6} borderWidth="3px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
                 <Heading size="lg" mb={4}>Gallery</Heading>
                 <Text fontSize="lg">
                   A picture is worth a thousand words. Check out our favorite snapshots from Lisbon, our work at MoOngy, team activities, and the beautiful places we've visited.
+                </Text>
+              </GlowingBox>
+            </MotionBox>
+          </RouterLink>
+
+          <RouterLink to="/about" style={{ textDecoration: 'none' }}>
+            <MotionBox
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
+              <GlowingBox align="stretch" p={6} borderWidth="3px" borderRadius="lg" borderColor="brand.blue" bg="brand.black">
+                <Heading size="lg" mb={4}>About Us</Heading>
+                <Text fontSize="lg">
+                  Meet our diverse team of students from Slovenia! Learn about our backgrounds, roles in the project, and how we're growing together through this amazing experience.
                 </Text>
               </GlowingBox>
             </MotionBox>

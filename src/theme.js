@@ -11,6 +11,7 @@ const theme = extendTheme({
       black: '#2b2929',
       white: '#f5f5f5',
       navbar: '#4a4848',
+      purple: '#6B46C1',
     },
   },
   styles: {
@@ -46,7 +47,6 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         fontFamily: 'Oswald',
-        color: 'brand.white',
       },
     },
     Text: {

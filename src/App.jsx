@@ -13,6 +13,7 @@ import ProjectPage from "./pages/ProjectPage";
 import JourneyPage from "./pages/JourneyPage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
+import SecretGalleryPage from "./pages/sample";
 
 const AnimatedNavLink = styled(RouterLink)`
   position: relative;
@@ -90,6 +91,7 @@ export default function App() {
           <Route path="/journey" element={<JourneyPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/secret-gallery" element={<SecretGalleryPage />} />
         </Routes>
       </Box>
     </Router>
