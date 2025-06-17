@@ -9,8 +9,7 @@ import {
   Divider,
   Image,
   AspectRatio,
-  SimpleGrid,
-  useColorModeValue
+  SimpleGrid
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
