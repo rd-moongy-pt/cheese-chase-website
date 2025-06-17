@@ -201,22 +201,22 @@ const GalleryPage = () => {
     {
       title: "Our",
       description: "Journey",
-      images: Array.from({ length: 7 }, (_, i) => `/pictures/gallery/us/${i + 1}.jpg`)
+      images: Array.from({ length: 7 }, (_, i) => `./pictures/gallery/us/${i + 1}.jpg`)
     },
     {
       title: "City",
       description: "Exploration",
-      images: Array.from({ length: 12 }, (_, i) => `/pictures/gallery/city/${i + 1}.jpg`)
+      images: Array.from({ length: 12 }, (_, i) => `./pictures/gallery/city/${i + 1}.jpg`)
     },
     {
       title: "Zoo",
       description: "Adventures",
-      images: Array.from({ length: 7 }, (_, i) => `/pictures/gallery/zoo/${i + 1}.jpg`)
+      images: Array.from({ length: 7 }, (_, i) => `./pictures/gallery/zoo/${i + 1}.jpg`)
     },
     {
       title: "Beach",
       description: "Paradise",
-      images: Array.from({ length: 8 }, (_, i) => `/pictures/gallery/beach/${i + 1}.jpg`)
+      images: Array.from({ length: 8 }, (_, i) => `./pictures/gallery/beach/${i + 1}.jpg`)
     }
   ];
 

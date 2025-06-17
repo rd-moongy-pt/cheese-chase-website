@@ -138,7 +138,7 @@ const JourneyPage = () => {
           >
             <AspectRatio ratio={21/9}>
               <Image
-                src="/pictures/journey/grad.jpg"
+                src="./pictures/journey/grad.jpg"
                 alt="Lisbon Streets"
                 objectFit="cover"
               />
@@ -152,7 +152,7 @@ const JourneyPage = () => {
             title="Arrival in Lisbon"
             description="Our team arrived in beautiful Lisbon, ready to start our Erasmus+ internship adventure. We were immediately captivated by the city's charm and warmth."
             isLeft={true}
-            image="/pictures/journey/letalo.jpg"
+            image="./pictures/journey/letalo.jpg"
           />
 
           <TimelineItem
@@ -160,7 +160,7 @@ const JourneyPage = () => {
             title="Getting Started at MoOngy"
             description="We began our internship at MoOngy, meeting our mentors and getting familiar with the Webots platform. The excitement of starting our project was incredible."
             isLeft={false}
-            image="/pictures/journey/team-photo.jpg"
+            image="./pictures/journey/team-photo.jpg"
           />
 
           <TimelineItem
@@ -168,7 +168,7 @@ const JourneyPage = () => {
             title="Enjoying weekend nights"
             description="Between work days, we explored Portugal colture and went sightseeing. But the weekend nights brought unforgettable memories and new friendships."
             isLeft={true}
-            image="/pictures/journey/krmp.jpg"
+            image="./pictures/journey/krmp.jpg"
           />
 
           <TimelineItem
@@ -176,7 +176,7 @@ const JourneyPage = () => {
             title="Making Progress"
             description="As we dove deeper into our project, we celebrated small victories and overcame challenges together. Our team's collaboration grew stronger each day."
             isLeft={false}
-            image="/pictures/journey/41.jpg"
+            image="./pictures/journey/41.jpg"
           />
 
           <TimelineItem
@@ -184,7 +184,7 @@ const JourneyPage = () => {
             title="Building Connections"
             description="We attended a vibrant local festival where we immersed ourselves in Portuguese traditions and made new friends from different cultures. These cultural exchanges and new friendships made our experience truly special."
             isLeft={true}
-            image="/pictures/journey/IMG_3921.jpg"
+            image="./pictures/journey/IMG_3921.jpg"
           />
 
           <TimelineItem
@@ -192,7 +192,7 @@ const JourneyPage = () => {
             title="Growing Together"
             description="As our internship continues, we're excited about the progress we're making and the memories we're creating. This journey is shaping us both personally and professionally."
             isLeft={false}
-            image="/pictures/journey/44.jpg"
+            image="./pictures/journey/44.jpg"
           />
         </VStack>
 
@@ -214,9 +214,9 @@ const JourneyPage = () => {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {[
-              { src: "/pictures/journey/trip.jpg", alt: "Weekend Trip" },
-              { src: "/pictures/journey/66.jpg", alt: "Cultural Visit" },
-              { src: "/pictures/journey/52.jpg", alt: "Team Dinner" }
+              { src: "./pictures/journey/trip.jpg", alt: "Weekend Trip" },
+              { src: "./pictures/journey/66.jpg", alt: "Cultural Visit" },
+              { src: "./pictures/journey/52.jpg", alt: "Team Dinner" }
             ].map((img, index) => (
               <MotionBox
                 key={index}

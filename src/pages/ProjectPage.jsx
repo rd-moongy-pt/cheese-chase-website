@@ -32,13 +32,13 @@ const ProjectPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const galleryImages = [
-    "/pictures/project/ff.png",
-    "/pictures/project/sir.png",
-    "/pictures/project/image.png",
-    "/pictures/project/123.png",
-    "/pictures/project/1234.png",
-    "/pictures/project/12345.png",
-    "/pictures/project/3.jpg"
+    "./pictures/project/ff.png",
+    "./pictures/project/sir.png",
+    "./pictures/project/image.png",
+    "./pictures/project/123.png",
+    "./pictures/project/1234.png",
+    "./pictures/project/12345.png",
+    "./pictures/project/3.jpg"
   ];
 
   const handleImageClick = (imageSrc) => {
@@ -134,7 +134,7 @@ const ProjectPage = () => {
             >
               <AspectRatio ratio={16/9}>
                 <MotionImage
-                  src="/pictures/project/ff.png"
+                  src="./pictures/project/ff.png"
                   alt="Webots Development"
                   objectFit="cover"
                   borderRadius="lg"
@@ -158,17 +158,17 @@ const ProjectPage = () => {
                 {
                   title: "Planning",
                   description: "Initial concept development and game design planning",
-                  image: "/pictures/project/sir.png"
+                  image: "./pictures/project/sir.png"
                 },
                 {
                   title: "Development",
                   description: "Implementing game mechanics and robot behaviors",
-                  image: "/pictures/project/image.png"
+                  image: "./pictures/project/image.png"
                 },
                 {
                   title: "Testing",
                   description: "Testing the bots and the game",
-                  image: "/pictures/project/123.png"
+                  image: "./pictures/project/123.png"
                 }
               ].map((phase, index) => (
                 <MotionVStack
@@ -218,7 +218,7 @@ const ProjectPage = () => {
               <Box flex="1" mb={4}>
                 <AspectRatio ratio={16/9}>
                   <MotionImage
-                    src="/pictures/project/1234.png"
+                    src="./pictures/project/1234.png"
                     alt="Project Achievement"
                     objectFit="cover"
                     borderRadius="lg"
