@@ -62,7 +62,7 @@ const HomePage = () => (
             Welcome to our journey! We're 8 students from Slovenia doing an Erasmus+ internship at MoOngy in Portugal.
           </Text>
           <Image 
-            src="./team-photo.jpg" 
+            src="/cheese-chase-website/team-photo.jpg" 
             alt="Our team at MoOngy" 
             maxWidth="100%"
             maxHeight="20%"

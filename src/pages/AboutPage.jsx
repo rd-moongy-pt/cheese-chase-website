@@ -53,42 +53,42 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Žan Debenjak",
-      image: "./pictures/aboutus/zan.jpg",
+      image: "/cheese-chase-website/pictures/aboutus/zan.jpg",
       description: "Belsko - Slovenija"
     },
     {
       name: "Luka Česnik",
-      image: "./pictures/aboutus/cesnik2.png",
+      image: "/cheese-chase-website/pictures/aboutus/cesnik2.png",
       description: "Zagorje - Slovenija"
     },
     {
       name: "Matevž Bremec",
-      image: "./pictures/aboutus/bremc.jpg",
+      image: "/cheese-chase-website/pictures/aboutus/bremc.jpg",
       description: "Ilirska Bistrica - Slovenija"
     },
     {
       name: "Tai Raimondi",
-      image: "./pictures/aboutus/krmp.jpg",
+      image: "/cheese-chase-website/pictures/aboutus/krmp.jpg",
       description: "Divača - Slovenija"
     },
     {
       name: "Nejc Slavec",
-      image: "./pictures/aboutus/Slve.png",
+      image: "/cheese-chase-website/pictures/aboutus/Slve.png",
       description: "Koče - Slovenija"
     },
     {
       name: "Maj Poženel",
-      image: "./pictures/aboutus/maj.jpg",
+      image: "/cheese-chase-website/pictures/aboutus/maj.jpg",
       description: "Rakitnik - Slovenija"
     },
     {
       name: "Luka Groznik",
-      image: "./pictures/aboutus/groznik.png",
+      image: "/cheese-chase-website/pictures/aboutus/groznik.png",
       description: "Prestranek - Slovenija"
     },
     {
       name: "Nik Premru",
-      image: "./pictures/aboutus/nik.png",
+      image: "/cheese-chase-website/pictures/aboutus/nik.png",
       description: "Velika Pristava - Slovenija"
     }
   ];
@@ -109,7 +109,7 @@ const AboutPage = () => {
           </Text>
           <AspectRatio ratio={21/9} mb={12}>
             <Image
-              src="./pictures/aboutus/team2.png"
+              src="/cheese-chase-website/pictures/aboutus/team2.png"
               alt="Our Team at Work"
               objectFit="cover"
               borderRadius="lg"

@@ -138,7 +138,7 @@ const JourneyPage = () => {
           >
             <AspectRatio ratio={21/9}>
               <Image
-                src="./pictures/journey/grad.jpg"
+                src="/cheese-chase-website/pictures/journey/grad.jpg"
                 alt="Lisbon Streets"
                 objectFit="cover"
               />
@@ -152,7 +152,7 @@ const JourneyPage = () => {
             title="Arrival in Lisbon"
             description="Our team arrived in beautiful Lisbon, ready to start our Erasmus+ internship adventure. We were immediately captivated by the city's charm and warmth."
             isLeft={true}
-            image="./pictures/journey/letalo.jpg"
+            image="/cheese-chase-website/pictures/journey/letalo.jpg"
           />
 
           <TimelineItem
@@ -160,7 +160,7 @@ const JourneyPage = () => {
             title="Getting Started at MoOngy"
             description="We began our internship at MoOngy, meeting our mentors and getting familiar with the Webots platform. The excitement of starting our project was incredible."
             isLeft={false}
-            image="./pictures/journey/team-photo.jpg"
+            image="/cheese-chase-website/pictures/journey/team-photo.jpg"
           />
 
           <TimelineItem
@@ -214,9 +214,9 @@ const JourneyPage = () => {
           </Heading>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {[
-              { src: "./pictures/journey/trip.jpg", alt: "Weekend Trip" },
-              { src: "./pictures/journey/66.jpg", alt: "Cultural Visit" },
-              { src: "./pictures/journey/52.jpg", alt: "Team Dinner" }
+              { src: "/cheese-chase-website/pictures/journey/trip.jpg", alt: "Weekend Trip" },
+              { src: "/cheese-chase-website/pictures/journey/66.jpg", alt: "Cultural Visit" },
+              { src: "/cheese-chase-website/pictures/journey/52.jpg", alt: "Team Dinner" }
             ].map((img, index) => (
               <MotionBox
                 key={index}
