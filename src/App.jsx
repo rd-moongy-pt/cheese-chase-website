@@ -6,7 +6,7 @@ import {
   HStack,
   Box
 } from "@chakra-ui/react";
-import { BrowserRouter as Router, Routes, Route, Link as RouterLink, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link as RouterLink, useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
