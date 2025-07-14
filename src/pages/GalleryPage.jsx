@@ -201,22 +201,22 @@ const GalleryPage = () => {
     {
       title: "Our",
       description: "Journey",
-      images: Array.from({ length: 7 }, (_, i) => `/cheese-chase-website/pictures/gallery/us/${i + 1}.jpg`)
+      images: Array.from({ length: 7 }, (_, i) => `${import.meta.env.BASE_URL}/pictures/gallery/us/${i + 1}.jpg`)
     },
     {
       title: "City",
       description: "Exploration",
-      images: Array.from({ length: 12 }, (_, i) => `/cheese-chase-website/pictures/gallery/city/${i + 1}.jpg`)
+      images: Array.from({ length: 12 }, (_, i) => `${import.meta.env.BASE_URL}/pictures/gallery/city/${i + 1}.jpg`)
     },
     {
       title: "Zoo",
       description: "Adventures",
-      images: Array.from({ length: 7 }, (_, i) => `/cheese-chase-website/pictures/gallery/zoo/${i + 1}.jpg`)
+      images: Array.from({ length: 7 }, (_, i) => `${import.meta.env.BASE_URL}/pictures/gallery/zoo/${i + 1}.jpg`)
     },
     {
       title: "Beach",
       description: "Paradise",
-      images: Array.from({ length: 8 }, (_, i) => `/cheese-chase-website/pictures/gallery/beach/${i + 1}.jpg`)
+      images: Array.from({ length: 8 }, (_, i) => `${import.meta.env.BASE_URL}/pictures/gallery/beach/${i + 1}.jpg`)
     }
   ];
 
@@ -257,6 +257,7 @@ const GalleryPage = () => {
         )}
 
         <Button
+          rel="nofollow"
           as={RouterLink}
           to="/secret-gallery"
           position="fixed"

@@ -53,42 +53,42 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Žan Debenjak",
-      image: "/cheese-chase-website/pictures/aboutus/zan.jpg",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/zan.jpg`,
       description: "Belsko - Slovenija"
     },
     {
       name: "Luka Česnik",
-      image: "/cheese-chase-website/pictures/aboutus/cesnik2.png",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/cesnik2.png`,
       description: "Zagorje - Slovenija"
     },
     {
       name: "Matevž Bremec",
-      image: "/cheese-chase-website/pictures/aboutus/bremc.jpg",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/bremc.jpg`,
       description: "Ilirska Bistrica - Slovenija"
     },
     {
       name: "Tai Raimondi",
-      image: "/cheese-chase-website/pictures/aboutus/krmp.jpg",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/krmp.jpg`,
       description: "Divača - Slovenija"
     },
     {
       name: "Nejc Slavec",
-      image: "/cheese-chase-website/pictures/aboutus/Slve.png",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/Slve.png`,
       description: "Koče - Slovenija"
     },
     {
       name: "Maj Poženel",
-      image: "/cheese-chase-website/pictures/aboutus/maj.jpg",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/maj.jpg`,
       description: "Rakitnik - Slovenija"
     },
     {
       name: "Luka Groznik",
-      image: "/cheese-chase-website/pictures/aboutus/groznik.png",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/groznik.png`,
       description: "Prestranek - Slovenija"
     },
     {
       name: "Nik Premru",
-      image: "/cheese-chase-website/pictures/aboutus/nik.png",
+      image: `${import.meta.env.BASE_URL}/pictures/aboutus/nik.png`,
       description: "Velika Pristava - Slovenija"
     }
   ];
@@ -109,7 +109,7 @@ const AboutPage = () => {
           </Text>
           <AspectRatio ratio={21/9} mb={12}>
             <Image
-              src="/cheese-chase-website/pictures/aboutus/team2.png"
+              src={`${import.meta.env.BASE_URL}pictures/aboutus/team2.png`}
               alt="Our Team at Work"
               objectFit="cover"
               borderRadius="lg"

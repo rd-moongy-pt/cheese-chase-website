@@ -32,13 +32,13 @@ const ProjectPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const galleryImages = [
-    "/cheese-chase-website/pictures/project/ff.png",
-    "/cheese-chase-website/pictures/project/sir.png",
-    "/cheese-chase-website/pictures/project/image.png",
-    "/cheese-chase-website/pictures/project/123.png",
-    "/cheese-chase-website/pictures/project/1234.png",
-    "/cheese-chase-website/pictures/project/12345.png",
-    "/cheese-chase-website/pictures/project/3.jpg"
+    `${import.meta.env.BASE_URL}/pictures/project/ff.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/sir.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/image.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/123.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/1234.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/12345.png`,
+    `${import.meta.env.BASE_URL}/pictures/project/3.jpg`,
   ];
 
   const handleImageClick = (imageSrc) => {
@@ -134,7 +134,7 @@ const ProjectPage = () => {
             >
               <AspectRatio ratio={16/9}>
                 <MotionImage
-                  src="/cheese-chase-website/pictures/project/ff.png"
+                  src={`${import.meta.env.BASE_URL}/pictures/project/ff.png`}
                   alt="Webots Development"
                   objectFit="cover"
                   borderRadius="lg"
@@ -158,17 +158,17 @@ const ProjectPage = () => {
                 {
                   title: "Planning",
                   description: "Initial concept development and game design planning",
-                  image: "/cheese-chase-website/pictures/project/sir.png"
+                  image: `${import.meta.env.BASE_URL}/pictures/project/sir.png`
                 },
                 {
                   title: "Development",
                   description: "Implementing game mechanics and robot behaviors",
-                  image: "/cheese-chase-website/pictures/project/image.png"
+                  image: `${import.meta.env.BASE_URL}/pictures/project/image.png`
                 },
                 {
                   title: "Testing",
                   description: "Testing the bots and the game",
-                  image: "/cheese-chase-website/pictures/project/123.png"
+                  image: `${import.meta.env.BASE_URL}/pictures/project/123.png`
                 }
               ].map((phase, index) => (
                 <MotionVStack
@@ -218,7 +218,7 @@ const ProjectPage = () => {
               <Box flex="1" mb={4}>
                 <AspectRatio ratio={16/9}>
                   <MotionImage
-                    src="/cheese-chase-website/pictures/project/1234.png"
+                    src={`${import.meta.env.BASE_URL}/pictures/project/1234.png`}
                     alt="Project Achievement"
                     objectFit="cover"
                     borderRadius="lg"

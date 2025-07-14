@@ -63,7 +63,7 @@ const Navbar = () => {
     >
       <HStack spacing={5} align="center">
         <RouterLink to="/">
-          <Image src="/logo.png" alt="Logo" boxSize="42px" />
+          <Image src={`${import.meta.env.BASE_URL}/logo.png`} alt="Logo" boxSize="42px" />
         </RouterLink>
         <RouterLink to="/" style={{ textDecoration: 'none' }}>
           <Heading size="xl" color="white">Cheese Chase</Heading>
